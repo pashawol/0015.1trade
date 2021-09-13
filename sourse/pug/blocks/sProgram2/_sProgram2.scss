@@ -11,10 +11,12 @@
 			position: relative;
 			@include media-breakpoint-up(lg) {
 				margin-top: 0;
+
 			}
+			margin-bottom: 30px;
 			@include media-breakpoint-up(sm) {
-			margin-top: -100px;
 			}
+			margin-top: -100px;
 				@include media-breakpoint-up(lg) {
 
 					&::before{

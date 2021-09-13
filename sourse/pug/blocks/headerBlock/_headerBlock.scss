@@ -94,6 +94,7 @@
 	}
 	&__img-wrap{
 		position: relative;
+		min-height: 400px;
 			@include media-breakpoint-up(lg){
 				position: absolute;
 				top: rem(-90);
