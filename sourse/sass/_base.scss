@@ -514,6 +514,17 @@ iframe {
 	color: #fff !important;
 	box-shadow: 6px 12px 15px rgba(0, 0, 0, 0.4), 0 6px 0 #c0202a;
 	letter-spacing: normal;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+		@include media-breakpoint-up(sm) {
+			min-height: rem(82);
+		}
+		min-height: rem(72);
+	padding-top: rem(5);
+	line-height: 1.2;
+	padding-bottom: rem(5);
 	@include mt;
 	&:hover{
 		transform: translateY(3px);
