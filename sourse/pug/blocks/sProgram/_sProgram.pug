@@ -1,0 +1,22 @@
+mixin sProgram(data)
+	// start sProgram
+	+b.SECTION.sProgram.section.text-center#sProgram&attributes(attributes)
+		.container
+			+b.section-title
+				h2 4&nbsp;шага к&nbsp;покорению <br> крупнейшей товарной биржи в&nbsp;мире&nbsp;&mdash; CME
+				p Простой путь от&nbsp;мечты к&nbsp;реальности
+			.row
+				mixin item(t,p, f)
+					+e.col.col-xl-3.col-md-6
+						+e.item 
+							if f
+								+e.first Вы здесь
+							+e.triangle
+							+e.title!= t
+							p.mb-0!= p
+				+item(`Первый шаг`,`Зарегистрируйтесь на бесплатный видеокурс &laquo;ScalpEx. Умножайте деньги на&nbsp;Чикагской бирже СМЕ&raquo;`,'ff')
+				+item(`Второй шаг`,`Внимательно изучите основные и&nbsp;дополнительные материалы видеокурса`)
+				+item(`Третий шаг`,`Изучите особенности торгового робота более подробно и&nbsp;потренируйтесь на&nbsp;демо-счете`)
+				+item(`Четвертый шаг`,`Применяйте знания на&nbsp;практике и&nbsp;получайте прибыль ежедневно`)
+			+btn("Хочу на бесплатный видеокурс")
+	// end sProgram

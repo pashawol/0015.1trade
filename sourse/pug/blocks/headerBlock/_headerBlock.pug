@@ -1,0 +1,17 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock#headerBlock&attributes(attributes)
+		.container
+			+e.content 	
+				+e.text-head #[span.text-info Бесплатный курс] трейдера-эксперта «ScalpEx. Умножайте деньги на Чикагской бирже»
+				h1 Как увеличивать свой депозит #[span на&nbsp;10% с&nbsp;каждой сделки] и&nbsp;совершать до&nbsp;20&nbsp;сделок в&nbsp;час
+				+e.text.h4 в автоматическом режиме, нажимая всего две кнопки
+				+e.img-wrap
+					+pic("head-man.png")
+					+b.head-author
+						+e.title Дмитрий Брыляков
+						+e.text автор и ведущий курса
+				+e.border-block
+					+e.border-text Получите БЕСПЛАТНЫЙ доступ к&nbsp;курсу и&nbsp;узнайте, как эффективно применять систему ScalpEx 2.0 для торговли на&nbsp;бирже CME
+					+btn('Хочу бесплатный доступ к курсу')
+	// end headerBlock

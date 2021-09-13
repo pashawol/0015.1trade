@@ -1,0 +1,20 @@
+mixin sCases(data)
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 10-50$ ежедневно #[span получается у&nbsp;всех]
+			mixin item(i)
+				+e.img-wrap(href=`img/@2x/case-${i}.png` data-fancybox="gallery") 
+					+pic(`case-${i}.png`)
+			+item(`1`)
+			+item(`2`)
+			+item(`3`)
+			+item(`4`)
+			+item(`5`)
+			+item(`6`)
+			+e.footer 
+				+e.footer-title Узнайте, как добиться таких же показателей!
+				+e.footer-text Изучите систему выгодного трейдинга на&nbsp;бирже&nbsp;CME #[span и&nbsp;получайте ежедневный доход в&nbsp;USD даже на&nbsp;минимальном депозите]
+				+btn("Хочу получать стабильный доход")
+	// end sCases

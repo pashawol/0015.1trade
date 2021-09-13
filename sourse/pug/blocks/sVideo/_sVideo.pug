@@ -1,0 +1,32 @@
+mixin sVideo(data)
+	// start sVideo
+	+b.SECTION.sVideo.section.text-center#sVideo&attributes(attributes)
+		+e.ellips
+		+e.ellips--foot
+		.container
+			+b.section-title
+				h2 Посмотрите индикатор ScalpEx 2.0&nbsp;в действии!
+				p Робот построен на&nbsp;технологиях трейдинга, которые безупречно работают в&nbsp;течение 5&nbsp;лет
+				
+			.row
+				mixin item(a, t)
+					+e.col.col-lg-6 
+						+b.video-item
+							block
+							+e.video(data-video=` <iframe src="https://player.vimeo.com/video/${a}?autoplay=1&loop=1&autopause=0" loading="lazy" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>` ).bg-wrap
+								+pic(`${a}.jpg`,'bg').picture-bg
+								//- img(   src=`https://i.vimeocdn.com/video/${a}?mw=700&mh=375` laoding="lazy" sizes="(max-width: 640px) 100vw, 640px" , alt="")
+				+item(`597797770`)
+					+e.title  #[span +45&nbsp;000 рублей] за&nbsp;полчаса на&nbsp;полном автомате
+				+item(`594520709`)
+					+e.title Прибыль  #[span +300 евро] меньше чем за&nbsp;час
+				+item(`593869496`)
+					+e.title  #[span +1000 евро] за&nbsp;2&nbsp;точные сделки трендовая торговля на&nbsp;автомате
+				+item(`593607927`) 
+					+e.title Молниеносный результат #[span +240 евро] за&nbsp;2&nbsp;минуты торгов
+			+e.footer
+				+e.footer-title 100% учеников, применяющих систему ScalpEx стабильно увеличивают свой депозит
+				+e.footer-title-sub Результаты опубликованы официально и&nbsp;подтверждены сотнями учеников
+				+e.footer-text Ссылки на&nbsp;другие записи торгов можно получить в&nbsp;процессе прохождения видеокурса
+				+btn("Хочу увеличить свой депозит")
+	// end sVideo

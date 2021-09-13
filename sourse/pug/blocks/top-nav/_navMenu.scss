@@ -1,0 +1,25 @@
+.menu{
+	display: flex;
+	list-style: none;
+	@include roww(49px);
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	flex-wrap: wrap;
+	text-align: center;
+	li{
+		// margin-left: 0;
+		// margin-right: 0;
+		// padding: 0;
+	}
+	a{
+		font-size: rem(20);
+		display: block;
+		color: #fff;
+		border-bottom: 1px solid transparent;
+		&:hover{
+			border-color: #6bbdea;
+		}
+		// padding: rem(20) rem(10);
+	}
+}

@@ -1,0 +1,56 @@
+// start .sSteps
+.sSteps {
+		// --sPT: ;
+		// --sPB: ;
+		
+		h2{
+			@include rfs(46px);
+		}
+		
+		&__item{ 
+			box-shadow: 3px 6px 15px rgba(87, 158, 222, 0.18);
+			border-radius: 11px;
+			background-color: #ffffff;
+			min-height: calc(100% - 59px);
+			margin-bottom: 59px;
+			display: flex;
+			padding: rem(30) rem(18) rem(40);
+			position: relative;
+			@include media-breakpoint-up(md) {
+				padding-left: rem(118);
+			}
+			picture{
+				flex:  0 0  auto;
+				margin-right: 17px;
+				@include media-breakpoint-up(md) {
+
+					position: absolute;
+					left: rem(18);
+					top: rem(30);
+				}
+			}
+		}
+		&__title{
+			@extend .h4;
+			font-weight: 500;
+			margin-bottom: 1rem;
+			display: flex;
+			align-items: center;
+		}
+		
+		p{
+			@include rfs(22px)
+		}
+		@include media-breakpoint-up(xl) {
+		--sTPB: 76px;
+		.row{
+			--bs-gutter-x: 50px;
+		}
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSteps

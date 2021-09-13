@@ -1,0 +1,17 @@
+mixin sTraningFor(data)
+	// start sTraningFor
+	+b.SECTION.sTraningFor.section#sTraningFor&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Кому курс будет особенно полезен
+				
+			.row
+				mixin item(i,t,p)
+					+e.col.col-md-4
+						+pic(`sTraningFor-i-${i}.png`,'',0)
+						+e.title= t
+						p!= p
+				+item(`1`,`Новичкам на бирже`,`Делаете первые шаги в&nbsp;трейдинге и&nbsp;хотите максимально быстрый выход на&nbsp;результаты здесь и&nbsp;сейчас`)
+				+item(`2`,`Опытным трейдерам`,`Подбираете проверенные способы автоматизации торгов и&nbsp;хотите получать ощутимые результаты как можно быстрее`)
+				+item(`3`,`Искателям выгоды`,`Ищете источники дополнительного дохода или хотите сменить профессию на&nbsp;более прибыльную`)
+	// end sTraningFor

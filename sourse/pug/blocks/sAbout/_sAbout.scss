@@ -1,0 +1,61 @@
+// start .sAbout
+.sAbout {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__item{
+		margin-top: rem(33);
+		display: flex;
+		align-items: center;
+		font-size: rem(22);
+		color: #171717;
+		picture{
+			width: 62px;
+			height: 62px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 auto;
+			margin-right: rem(18);
+			background-color: #2278ca;
+			border-radius: 50%;
+		}
+	}
+	.row{
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+
+			margin-bottom: rem(75);
+		}
+		margin-bottom: rem(55);
+	}
+	&__footer{
+		text-align: center;
+		&-title{
+			@extend .h4;
+			font-weight: 500;
+			margin-bottom: rem(20);
+		}
+		&-text{
+			@include media-breakpoint-down(sm) {
+				border-radius: 14px;
+				border: 2px solid;
+				padding: rem(20);
+			}
+			@include rfs(26px);
+			font-weight: 600;
+			color: #2278ca;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(890);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAbout

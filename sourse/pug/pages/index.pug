@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sTraningFor/_sTraningFor.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sProgram2/_sProgram2.pug
+include ../blocks/sAuthor/_sAuthor.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	+mob-mnu() 
+	header.header.bg-dark
+		+top-nav() 
+		+headerBlock()
+		+sTraningFor
+	+sAbout
+	
+	+sVideo
+	+sSteps
+	+sProgram
+	+sProgram2
+	+sAuthor
+	+sCases
+	+sFAQ
+	+footer()
+      
+
+
+

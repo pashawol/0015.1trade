@@ -1,0 +1,44 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row
+				.col-lg-auto.mb-4
+					+pic("logo-footer.png",'',0)
+
+				.col-md.mb-4
+					span.year-text
+					script.
+						function InfoDVDCurrentYear(year) {
+							let yearSpan = document.querySelector('.year-text');
+							var cur = new Date(); 
+							yearSpan.innerHTML = (
+								cur.getFullYear() != year 
+								? (year + '&mdash;' + cur.getFullYear())
+								: year
+							)
+						}
+						InfoDVDCurrentYear('2008');
+					|   © издательство
+					| 
+					a(href='//www.info-dvd.ru/?utm_source=footer_link'  target='_blank') Info-DVD.Ru
+					br
+					| Проект «
+					a(href='//www.infoclub.info/'  target='_blank') Инфоклуб
+					| »
+					br
+					script(src='//info-dvd.ru/codes/js/legal.utf8.js')
+				.col-md.mb-4
+					p
+						strong  Позвоните нам:
+						span
+							script(   src='//info-dvd.ru/codes/js/telephone-number.js')
+						br
+						| или 
+						a.tdu(href='//info-dvd.ru/support/apply/', target='_blank') оставьте свой номер 
+						| &nbsp;и мы вам перезвоним
+				.col-md-auto.mb-4
+					p
+						| #[strong  Служба поддержки:]
+						a.tdu(href='//info.support-desk.ru/form', target='_blank', title='Задать свой вопрос') Задать свой вопрос
+						br
+						a.tdu(href='//info.support-desk.ru/?base=1', target='_blank' title='Частые вопросы и ответы на них') Частые вопросы и ответы на них

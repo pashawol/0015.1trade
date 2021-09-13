@@ -1,0 +1,23 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Что такое система ScalpEx 2.0
+				p Это робот-индикатор, который отслеживает благоприятные точки для совершения сделок и&nbsp;позволяет получать #[span от&nbsp;10% прибыли] с&nbsp;каждой
+			.row
+				.col-lg-6.text-lg-start.text-center
+					+pic("monitor.png")
+				.col-lg-6
+					mixin item(i,t)
+						+e.item
+							+pic(`sAbout-i-${i}.png`,'',0)
+							+e.text!= t
+					+item(`1`,`Робот-индикатор для успешной торговли`)
+					+item(`2`,`Автоматический и ручной режимы`)
+					+item(`3`,`Подсказывает благоприятные точки сделок`)
+					+item(`4`,`Помогает совершать до 20 сделок в час`) 
+			+e.footer
+				+e.footer-title ScalpEx 2.0&nbsp;&mdash; это принципы и&nbsp;алгоритмы, которые оттачивались годами
+				+e.footer-text С&nbsp;их&nbsp;помощью многие люди удваивают свои депозиты ежемесячно, посвящая трейдингу 1-2 часа в&nbsp;день
+	// end sAbout
