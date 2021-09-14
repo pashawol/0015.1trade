@@ -1,21 +1,33 @@
 
 mixin modal() 
-	//  start modals
+	// ФОРМА ПОДПИСКИ
+	.leadbox_window(style='display:none; line-height:normal;', data-selector='lb_target')
+		.ld_content_wrapper
+			.ld_close
+			.ld_progressbar
+			.ld_main_line
+				.ld_icon
+					+pic("author.png")(style='height: 482px; margin-bottom: -13px;')
+					//- img(src='img/@2x/manmob.png', lia style='height: 482px; margin-bottom: -23px;', alt='')
+				div(style='    width: 400px;')
+					p.small.text-white Поздравляем! Вы можете получить доступ бесплатно
+					.ld_content(style='margin-left: 0;    width: 400px;')
+						.ic_sform.ic_sform_2_0990bd2a
+						script(type='text/javascript').
+							(function (d, w, r, t, cl) {
+							var rid = r.toString().substr(2);var e = d.getElementsByClassName(cl)[0];
+							e.className="";e.id = "ic_sform_"+rid;
+							var n = d.getElementsByTagName(t)[0], s = d.createElement(t), f = function () {n.parentNode.insertBefore(s, n);};
+							s.type = "text/javascript";s.async = true;s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//www.infoclub.info/sform_loader/2/0990bd2a/?rid="+rid;
+							if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else {f();}
+							})(document, window, Math.random(), "script", "ic_sform_2_0990bd2a");
+					.time__block
+						.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+			.ps
+				| Мы гарантируем безопасность введенной Вами информации. 
+				a(href='https://info-dvd.ru/pages/privacy', target='_blank')
+					| Политика
+					| конфиденциальности
+	link(rel='stylesheet', media='all', href='//info-dvd.ru/tools/lead_box/lead_box.css')
 	
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
-		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			+policy()
-	// #modal-call
-	
-	// end modals
+	// end
